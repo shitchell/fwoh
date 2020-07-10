@@ -5,6 +5,10 @@ A javascript library for adjusting elements to their parent's width or height ba
 
 This tool essentially resizes elements in the same manner as `object-fit: contain`, but without cropping the element once fit to its container. I wanted to be able to fit images inside of a div such that you could see as much of the image as possible, without letterbox-esque borders, while still being able to scroll to see the rest of the image (see [this project](https://shitchell.github.io/sm-viewer/) for an example).
 
+## Compatibility
+
+Tested on Chrome for Android, Chrome, Firefox, Safari, and a crappy SmartTV browser. The original intent was to be able to use it for a custom web-based screensaver on a TV using the somewhat feature-lacking web browsers found on SmartTV's/Xboxes/Wiis, etc... so it should be compatible with most every browser that runs Javascript. Feel free to let me know or send a pull request if you find a browser it doesn't work on!
+
 ## Getting Started
 
 #### Include the javascript file in your page
