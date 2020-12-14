@@ -2,6 +2,16 @@
 'use strict';
 
 var fwohSelector = "fwoh";
+var DEBUG = false;
+
+function debug() {
+    if (DEBUG && arguments.length > 0)
+    {
+        let args = Array.from(arguments);
+        args.unshift("[fwoh]");
+        console.log.apply(null, args);
+    }
+}
 
 function isElement(obj) {
     return obj instanceof Element || obj instanceof HTMLDocument;  
@@ -40,11 +50,11 @@ function resizeNode(node) {
         const parentAspectRatio = parentRect.width / parentRect.height;
 
         if (parentAspectRatio > nodeAspectRatio) {
-            console.log("fwoh: Adjusting to parent width (" + parentRect.width + ")", node);
+            debug(`Adjusting to parent width (${parentRect.width})`, node);
             node.style.width = parentRect.width + "px";
             node.style.height = (parentRect.width / nodeAspectRatio) + "px";
         } else {
-            console.log("fwoh: Adjusting to parent height (" + parentRect.height + ")", node);
+            debug(`Adjusting to parent height (${parentRect.height})`, node);
             node.style.height = parentRect.height + "px";
             node.style.width = (parentRect.height * nodeAspectRatio) + "px";
         }
