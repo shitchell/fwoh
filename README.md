@@ -1,5 +1,5 @@
 # fwoh
-A javascript library for adjusting elements to their parent's width or height based on aspect ratio
+A javascript library for adjusting elements to their parent's width or height, ensuring that they completely fill the parent while maintaining their aspect ratio
 
 ## What It Does
 
